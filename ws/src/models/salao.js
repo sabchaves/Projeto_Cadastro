@@ -4,13 +4,13 @@ const Schema = mongoose.Schema;
 const salao = new Schema({
   nome: {
     type: String,
-    required;: [ true, 'Nome é obrigatório']
+    required: [ true, 'Nome é obrigatório']
     },
   foto: String,
   capa: String,
   email: {
     type: String,
-    required;: [ true, 'Email é obrigatório']
+    required: [ true, 'Email é obrigatório']
     },
   senha: {
     type: String,
