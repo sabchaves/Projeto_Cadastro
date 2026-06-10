@@ -2,11 +2,20 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const salao = new Schema({
-  nome: String,
+  nome: {
+    type: String,
+    required;: [ true, 'Nome é obrigatório']
+    },
   foto: String,
   capa: String,
-  email: String,
-  senha: String,
+  email: {
+    type: String,
+    required;: [ true, 'Email é obrigatório']
+    },
+  senha: {
+    type: String,
+    default: null,
+    },
   telefone: String,
   recipientId: String,
   endereco: {
@@ -19,7 +28,7 @@ const salao = new Schema({
   },
   geo: {
     type: String,
-    coordinates: [],
+    coordinates: Array,
   },
   dataCadastro: {
     type: Date,
